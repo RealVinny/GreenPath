@@ -9,8 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/User")
 public class database_config {
 
-    @GetMapping("login")
-    public JSONPObject login(String user_name, String plain_password){
-            JSONPObject User;
-    }
+
 }
