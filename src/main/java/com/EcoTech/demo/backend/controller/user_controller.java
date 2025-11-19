@@ -1,11 +1,11 @@
-package com.EcoTech.demo.controller;
+package com.EcoTech.demo.backend.controller;
 
-import com.EcoTech.demo.DTO.user_full_responseDTO;
-import com.EcoTech.demo.DTO.user_summary_responseDTO;
-import com.EcoTech.demo.DTO.user_updateDTO;
-import com.EcoTech.demo.entity.User;
-import com.EcoTech.demo.repositorie.user_repository;
-import com.EcoTech.demo.service.User_service;
+import com.EcoTech.demo.backend.DTO.user_full_responseDTO;
+import com.EcoTech.demo.backend.DTO.user_summary_responseDTO;
+import com.EcoTech.demo.backend.DTO.user_updateDTO;
+import com.EcoTech.demo.backend.entity.User;
+import com.EcoTech.demo.backend.repositorie.user_repository;
+import com.EcoTech.demo.backend.service.User_service;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

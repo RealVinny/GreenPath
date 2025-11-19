@@ -1,4 +1,4 @@
-package com.EcoTech.demo.entity;
+package com.EcoTech.demo.backend.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 

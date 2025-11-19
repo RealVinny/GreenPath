@@ -1,6 +1,6 @@
-package com.EcoTech.demo.repositorie;
+package com.EcoTech.demo.backend.repositorie;
 
-import com.EcoTech.demo.entity.User;
+import com.EcoTech.demo.backend.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

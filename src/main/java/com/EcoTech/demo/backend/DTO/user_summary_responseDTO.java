@@ -1,4 +1,4 @@
-package com.EcoTech.demo.DTO;
+package com.EcoTech.demo.backend.DTO;
 
 import lombok.Data;
 

@@ -1,10 +1,10 @@
-package com.EcoTech.demo.service;
+package com.EcoTech.demo.backend.service;
 
-import com.EcoTech.demo.DTO.user_full_responseDTO;
-import com.EcoTech.demo.DTO.user_updateDTO;
-import com.EcoTech.demo.repositorie.user_repository;
-import com.EcoTech.demo.DTO.user_summary_responseDTO;
-import com.EcoTech.demo.entity.User;
+import com.EcoTech.demo.backend.DTO.user_full_responseDTO;
+import com.EcoTech.demo.backend.DTO.user_updateDTO;
+import com.EcoTech.demo.backend.repositorie.user_repository;
+import com.EcoTech.demo.backend.DTO.user_summary_responseDTO;
+import com.EcoTech.demo.backend.entity.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
