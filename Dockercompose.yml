@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+
+  database:
+    build: ./database
+    container_name: greenpath_db
+    environment:
+      POSTGRES_USER: vinny
+      POSTGRES_PASSWORD: vinny
+      POSTGRES_DB: greenpath
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - greenpath_net
+
+  backend:
+    build: ./backend
+    container_name: greenpath_backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/greenpath
+      SPRING_DATASOURCE_USERNAME: vinny
+      SPRING_DATASOURCE_PASSWORD: vinny
+    depends_on:
+      - database
+    ports:
+      - "8080:8080"
+    networks:
+      - greenpath_net
+
+  frontend:
+    build: ./frontend
+    container_name: greenpath_frontend
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+    networks:
+      - greenpath_net
+
+volumes:
+  db_data:
+
+networks:
+  greenpath_net:
