@@ -13,8 +13,6 @@ services:
       - "5433:5432"
     volumes:
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
-    networks:
-      - greenpath_net
 
   backend:
     build: ./backend
@@ -28,21 +26,22 @@ services:
       - database
     ports:
       - "8080:8080"
-    networks:
-      - greenpath_net
 
   frontend:
-    build: ./frontend
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
     container_name: greenpath_frontend
     ports:
       - "8081:80"
     depends_on:
       - backend
-    networks:
-      - greenpath_net
+    volumes:
+      - ./frontend/nginx/default.conf:/etc/nginx/conf.d/default.conf
 
 volumes:
   db_data:
 
 networks:
-  greenpath_net:
+    default:
+      driver: bridge

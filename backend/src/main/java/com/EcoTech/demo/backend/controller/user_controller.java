@@ -9,7 +9,7 @@ import com.EcoTech.demo.backend.service.User_service;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/user/")
+@RequestMapping("/api/user")
 public class user_controller {
 
     private final User_service user_service;
@@ -22,7 +22,7 @@ public class user_controller {
     }
 
 
-    @GetMapping("/full/id={id}")
+    @GetMapping("/full/{id}")
     public user_full_responseDTO findFullId(@PathVariable long id) {
         return user_service.getUser(id);
     }

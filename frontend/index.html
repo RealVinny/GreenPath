@@ -685,10 +685,8 @@
     <main class="content">
       <!-- PÁGINA TRILHAS -->
       <section id="trilhas" class="page page--active">
-        <p id = "nome" style="text-transform: uppercase; font-size: 11px; color: #047857; font-weight: 600; margin-bottom: 4px;">
-          Olá, {UserName}🌱
-        </p>
-        <h2>Suas trilhas financeiras</h2>
+        <p id="nome"></p>
+          <h2>Suas trilhas financeiras</h2>
         <p class="text-muted">
           Avance nas trilhas para desbloquear missões e créditos sustentáveis.
         </p>
@@ -1120,55 +1118,8 @@
     </main>
   </div>
 
-  <script>
-    // --- Troca de abas ---
-    const tabs = document.querySelectorAll(".tab");
-    const pages = document.querySelectorAll(".page");
+  <script src="/js/index.js"></script>
 
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        const alvo = tab.dataset.tab;
-
-        tabs.forEach((t) => t.classList.remove("tab--active"));
-        pages.forEach((p) => p.classList.remove("page--active"));
-
-        tab.classList.add("tab--active");
-        document.getElementById(alvo).classList.add("page--active");
-      });
-    });
-
-    // --- Simulador de energia solar (JS simples) ---
-    const btnSimular = document.getElementById("btn-simular");
-
-    btnSimular.addEventListener("click", () => {
-      const gasto = Number(document.getElementById("gasto").value) || 0;
-      const entrada = Number(document.getElementById("entrada").value) || 0;
-      const prazo = Number(document.getElementById("prazo").value) || 0;
-
-      if (!gasto || !prazo) {
-        alert("Preencha pelo menos o gasto médio e o prazo 😊");
-        return;
-      }
-
-      // Regras bem simples só pra exemplo:
-      // - valor do sistema ≈ 60 x gasto
-      // - parcela ≈ (valor - entrada) / prazo
-      // - economia mensal ≈ 0.7 x gasto
-      const valorSistema = gasto * 60;
-      const restante = Math.max(valorSistema - entrada, 0);
-      const parcela = prazo > 0 ? restante / prazo : 0;
-      const economia = gasto * 0.7;
-      const retornoMeses = economia > 0 ? restante / economia : 0;
-      const retornoAnos = retornoMeses / 12;
-
-      document.getElementById("parcela").textContent =
-        "R$ " + parcela.toFixed(2).replace(".", ",");
-      document.getElementById("economia").textContent =
-        "R$ " + economia.toFixed(2).replace(".", ",");
-      document.getElementById("retorno").textContent =
-        retornoAnos.toFixed(1).replace(".", ",") + " anos";
-    });
-  </script>
 </body>
 </html>
 
