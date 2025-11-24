@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Login - Carteira Semente</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Carteira Semente</title>
   <style>
     :root {
       --green: #16a34a;
@@ -37,9 +38,9 @@
       padding: 16px;
     }
 
-    .login-wrapper {
+    .cadastro-wrapper {
       width: 100%;
-      max-width: 380px;
+      max-width: 420px;
     }
 
     .logo-top {
@@ -124,34 +125,43 @@
       pointer-events: none;
     }
 
-    .card h2 {
-      margin: 0 0 4px;
-      font-size: 18px;
+    .card-inner {
       position: relative;
       z-index: 1;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(74, 222, 128, 0.85);
+      background: rgba(22, 163, 74, 0.12);
+      margin-bottom: 10px;
+    }
+
+    .app-badge-icon {
+      font-size: 14px;
+    }
+
+    .app-badge-text {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #bbf7d0;
+    }
+
+    .card h2 {
+      margin: 4px 0 4px;
+      font-size: 18px;
     }
 
     .card p.subtitle {
       margin: 0 0 14px;
       font-size: 13px;
       color: var(--muted);
-      position: relative;
-      z-index: 1;
-    }
-
-    .pill-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 3px 10px;
-      border-radius: 999px;
-      background: rgba(22, 163, 74, 0.15);
-      border: 1px solid rgba(52, 211, 153, 0.7);
-      color: #bbf7d0;
-      font-size: 11px;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
     }
 
     .form-group {
@@ -160,8 +170,6 @@
       gap: 4px;
       margin-bottom: 10px;
       font-size: 12px;
-      position: relative;
-      z-index: 1;
     }
 
     label {
@@ -169,7 +177,10 @@
       color: #d1d5db;
     }
 
-    input {
+    input,
+    textarea,
+    select {
+      width: 100%;
       padding: 9px 10px;
       border-radius: 10px;
       border: 1px solid var(--border);
@@ -181,13 +192,17 @@
         border-color 0.15s ease,
         box-shadow 0.15s ease,
         background 0.15s ease;
+      resize: vertical;
     }
 
-    input::placeholder {
+    input::placeholder,
+    textarea::placeholder {
       color: #6b7280;
     }
 
-    input:focus {
+    input:focus,
+    textarea:focus,
+    select:focus {
       border-color: var(--green);
       box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.5);
       background: #020617;
@@ -197,7 +212,7 @@
       width: 100%;
       border-radius: 999px;
       border: none;
-      padding: 9px 14px;
+      padding: 10px 14px;
       font-size: 14px;
       font-weight: 600;
       cursor: pointer;
@@ -207,13 +222,11 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      margin-top: 6px;
+      margin-top: 8px;
       transition:
         transform 0.1s ease,
         box-shadow 0.15s ease,
         filter 0.15s ease;
-      position: relative;
-      z-index: 1;
     }
 
     .btn-primary:hover {
@@ -231,8 +244,6 @@
       font-size: 11px;
       text-align: center;
       color: var(--muted);
-      position: relative;
-      z-index: 1;
     }
 
     .helper-text a {
@@ -254,64 +265,76 @@
   </style>
 </head>
 <body>
-  <div class="login-wrapper">
+  <div class="cadastro-wrapper">
     <div class="logo-top">
       <div class="logo-circle">
         <span class="logo-icon">🌱</span>
       </div>
       <div>
         <p class="logo-text-title">Carteira Semente</p>
-        <p class="logo-text-subtitle">Finanças simples, impacto real</p>
       </div>
     </div>
 
     <div class="card">
-    <div class="pill-badge">
-      🌳
-      <span>Acesse sua jornada financeira verde</span>
-    </div>
-
-      <h2>Entrar</h2>
-      <p class="subtitle">
+      <div class="card-inner">
        
-      </p>
 
-      <form onsubmit="irParaApp(event)">
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="voce@exemplo.com"
-            required
-          />
-        </div>
+        <h2>Crie sua Conta</h2>
 
-        <div class="form-group">
-          <label for="senha">Senha</label>
-          <input
-            id="senha"
-            type="password"
-            placeholder="Digite sua senha"
-            required
-          />
-        </div>
+        <form id="cadastroForm">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="Seu nome completo" required />
+          </div>
 
-        <button class="btn-primary" type="submit">
-          <span class="icon">➡️</span>
-          <span>Acessar conta</span>
-        </button>
-      </form>
+          <div class="form-group">
+            <label for="apelido">Apelido</label>
+            <input type="text" id="apelido" placeholder="Como quer ser chamado(a)" />
+          </div>
 
-      <p class="helper-text">
-        Não tem conta ainda?
-        <a href="cadastro.html">Criar conta</a>
-      </p>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="voce@exemplo.com" required />
+          </div>
 
-      <p class="helper-text">
-       
-      </p>
-    </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Crie uma senha" required />
+          </div>
+
+          <div class="form-group">
+            <label for="sexo">Sexo</label>
+            <select id="sexo" required>
+              <option value="">Selecione</option>
+              <option value="true">Masculino</option>
+              <option value="false">Feminino</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="data_nasc">Data de Nascimento</label>
+            <input type="date" id="data_nasc" required />
+          </div>
+
+          <div class="form-group">
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" placeholder="00000-000" required />
+          </div>
+
+          <div class="form-group">
+            <label for="proposta">Proposta</label>
+            <textarea
+              id="proposta"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            <span class="icon">✨</span>
+            <span>Criar Conta</span>
+          </button>
+        </form>
 
     <p class="footer-note">
     Time: Front-end, Back-end e Negócios (EcoTech)
@@ -319,11 +342,25 @@
   </div>
 
   <script>
-    function irParaApp(event) {
-      event.preventDefault(); 
-      window.location.href = "index.html"; 
-    }
+    document.getElementById("cadastroForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const dados = {
+        nome_cliente: document.getElementById("nome").value,
+        apelido_cliente: document.getElementById("apelido").value,
+        sexo: document.getElementById("sexo").value,
+        senha_cliente: document.getElementById("senha").value,
+        data_nascimento: document.getElementById("data_nasc").value,
+        email_usuario: document.getElementById("email").value,
+        cep: document.getElementById("cep").value,
+        proposta: document.getElementById("proposta").value
+      };
+
+      console.log("Enviando dados (simulação):", dados);
+      alert("Usuário cadastrado (simulação). Agora você poderia ser redirecionado para o app principal.");
+      // Se quiser, pode redirecionar:
+      // window.location.href = "index.html";
+    });
   </script>
 </body>
 </html>
-
