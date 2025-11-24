@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Carteira Semente</title>
   <style>
-    /* TRILHAS – CARD DE RESUMO */
+   
 .trilha-resumo {
   position: relative;
   overflow: hidden;
@@ -34,15 +34,14 @@
 }
 
  :root {
-  --green: #16a34a;        /* verde principal */
-  --green-light: #dcfce7;  /* fundo verdinho */
-  --green-soft: #bbf7d0;   /* bordas/destaques verdes */
-  --bg: #0f172a;           /* fundo geral escuro */
-  --bg-card: #020617;      /* cards escuros */
-  --text: #e5e7eb;         /* texto claro */
-  --muted: #9ca3af;        /* texto apagado */
-  --border: #1f2937;       /* cor padrão de borda */
-}
+  --green: #16a34a;     
+  --green-light: #dcfce7;  
+  --green-soft: #bbf7d0;   
+  --bg: #0f172a;           
+  --bg-card: #020617;     
+  --text: #e5e7eb;        
+  --muted: #9ca3af;        
+  --border: #1f2937;      
 
 
 
@@ -64,7 +63,7 @@
       flex-direction: column;
     }
 
-    /* HEADER */
+   
     .header {
   background: radial-gradient(circle at top left, #22c55e, #16a34a 40%, #065f46 100%);
   border-bottom: none;
@@ -107,7 +106,7 @@
   font-size: 12px;
   opacity: 0.9;
 }
-    /* NAV / ABAS */
+   
      .tabs {
   display: flex;
   gap: 12px;
@@ -144,7 +143,7 @@
   transform: translateY(-1px);
 }
 
-    /* CONTEÚDO GERAL */
+   
     .content {
       max-width: 960px;
       margin: 0 auto;
@@ -228,7 +227,7 @@
       grid-template-columns: 1fr;
       gap: 16px;
     }
-/* TRILHAS – LISTA DE TRILHAS */
+
 .trilhas-grid {
   display: flex;
   flex-direction: column;
@@ -379,7 +378,7 @@
       color: var(--muted);
     }
 
-    /* PROGRESSO */
+    
     .progress-wrapper {
       margin-top: 8px;
     }
@@ -407,7 +406,7 @@
       width: 0;
     }
 
-    /* BOTÕES */
+    
     .btn {
       border-radius: 999px;
       border: none;
@@ -440,7 +439,7 @@
       background: var(--green-light);
     }
 
-    /* FORMULÁRIO */
+   
     .form-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -517,7 +516,7 @@
       color: #047857;
     }
 
-    /* LISTA DE BENEFÍCIOS */
+    
     .benefits-list {
       list-style: none;
       padding: 0;
@@ -537,7 +536,7 @@
       color: #047857;
     }
 
-    /* PERFIL */
+   
     .profile-header {
       display: flex;
       flex-direction: column;
@@ -624,7 +623,7 @@
       font-weight: 600;
     }
 
-    /* TIMELINE */
+    
     .timeline {
       position: relative;
       border-left: 1px solid var(--border);
@@ -661,7 +660,7 @@
 </head>
 <body>
   <div class="app">
-    <!-- HEADER -->
+   
     <header class="header">
       <div class="header-left">
         <div class="logo">S</div>
@@ -672,7 +671,7 @@
       </div>
     </header>
 
-    <!-- NAV / ABAS -->
+   
     <nav class="tabs">
       <button class="tab tab--active" data-tab="trilhas">Trilhas</button>
       <button class="tab" data-tab="missoes">Missões</button>
@@ -681,9 +680,9 @@
       <button class="tab" data-tab="perfil">Perfil</button>
     </nav>
 
-    <!-- CONTEÚDO -->
+    
     <main class="content">
-      <!-- PÁGINA TRILHAS -->
+     
       <section id="trilhas" class="page page--active">
         <p id="nome"></p>
           <h2>Suas trilhas financeiras</h2>
@@ -713,7 +712,7 @@
         </div>
 
         <div class="grid-2">
-          <!-- Trilha 1 -->
+          
           <div class="card card--clickable">
             <div class="card-header">
               <div class="card-title-group">
@@ -736,7 +735,7 @@
             </div>
           </div>
 
-          <!-- Trilha 2 -->
+         
           <div class="card card--clickable">
             <div class="card-header">
               <div class="card-title-group">
@@ -759,7 +758,7 @@
             </div>
           </div>
 
-          <!-- Trilha 3 (bloqueada) -->
+          
           <div class="card" style="background: #f9fafb; border-style: dashed; opacity: 0.7;">
             <div class="card-header">
               <div class="card-title-group">
@@ -776,7 +775,7 @@
             </p>
           </div>
 
-          <!-- Trilha 4 -->
+          
           <div class="card card--clickable">
             <div class="card-header">
               <div class="card-title-group">
@@ -801,14 +800,14 @@
         </div>
       </section>
 
-      <!-- PÁGINA MISSÕES -->
+     
       <section id="missoes" class="page">
         <h2>Missões de Impacto</h2>
         <p class="text-muted">
           Complete desafios do dia a dia e transforme pontos em oportunidades verdes.
         </p>
 
-        <!-- filtros fake -->
+       
         <div style="margin: 16px 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px;">
           <button class="btn btn--outline" type="button" style="padding: 4px 10px; font-size: 11px;">
             Todas
@@ -847,7 +846,7 @@
             </div>
           </div>
 
-          <!-- Missão concluída -->
+         
           <div class="card" style="border-color: var(--green-soft);">
             <div class="card-header">
               <div class="card-title-group">
@@ -867,7 +866,7 @@
             </div>
           </div>
 
-          <!-- Missão bloqueada -->
+         
           <div class="card" style="background:#f9fafb;border-style:dashed;opacity:0.8;">
             <div class="card-header">
               <div class="card-title-group">
@@ -888,14 +887,14 @@
         </div>
       </section>
 
-      <!-- PÁGINA SIMULAR -->
+      
       <section id="simular" class="page">
         <h2>Simuladores</h2>
         <p class="text-muted">
           Veja quanto cabe no seu bolso e o impacto positivo de cada escolha.
         </p>
 
-        <!-- tipos de simulador (apenas layout) -->
+       
         <div class="grid-3" style="margin:16px 0;">
           <div class="card card--clickable">
             <div class="icon-circle icon-circle--yellow">☀️</div>
@@ -920,7 +919,7 @@
           </div>
         </div>
 
-        <!-- simulador de energia solar com JS -->
+        
         <div class="card">
           <p class="card-title">Simulador de Energia Solar</p>
 
@@ -961,7 +960,7 @@
         </div>
       </section>
 
-      <!-- PÁGINA BENEFÍCIOS -->
+     
       <section id="beneficios" class="page">
         <h2>Benefícios exclusivos</h2>
         <p class="text-muted">
@@ -1060,7 +1059,7 @@
         </div>
       </section>
 
-      <!-- PÁGINA PERFIL -->
+      
       <section id="perfil" class="page">
         <div class="profile-header">
           <div class="profile-main">
