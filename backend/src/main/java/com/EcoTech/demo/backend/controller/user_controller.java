@@ -18,9 +18,7 @@ public class user_controller {
     public user_controller(User_service userService, user_repository user_repository) {
         this.user_service = userService;
         this.user_repository = user_repository;
-
     }
-
 
     @GetMapping("/full/{id}")
     public user_full_responseDTO findFullId(@PathVariable long id) {

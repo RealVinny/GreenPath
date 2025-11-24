@@ -6,8 +6,11 @@ import com.EcoTech.demo.backend.entity.User;
 import com.EcoTech.demo.backend.repository.user_repository;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import org.springframework.stereotype.Service;
 
+@Service
 public class login_service {
+
     private final user_repository usRep;
 
     public login_service(user_repository usRep) {
@@ -16,17 +19,15 @@ public class login_service {
     }
 
     public login_resposeDTO loginAttempt(String email, String password) {
-        User usrEmail = usRep.findByEmailUsuario(email);
-        User usrPass = usRep.findBySenhaCliente(password);
+        User userLog = usRep.findByEmailUsuarioAndSenhaCliente(email, password);
 
-        if (usrEmail.equals(usrPass)) {
-            login_resposeDTO loginResposeDTO = new login_resposeDTO();
-            loginResposeDTO.setUser_name(usrPass.getNomeCliente());
-            loginResposeDTO.setUser_id(usrPass.getId());
-            loginResposeDTO.setToken(JWT.create().sign(Algorithm.HMAC256(usrPass.getSenhaCliente())));
+        login_resposeDTO logRes = new login_resposeDTO();
+        logRes.setToken(JWT.create().sign(Algorithm.HMAC256(password)));
+        logRes.setUser_name(userLog.getNomeCliente());
+        logRes.setUser_id(userLog.getId());
 
-            return loginResposeDTO;
-        }
-        return null;
+        return logRes;
+
+
     }
 }

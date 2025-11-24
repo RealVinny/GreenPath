@@ -12,15 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/login")
 public class login_controller {
 
-    private login_service login_service;
-    private user_repository user_repository;
+    private final user_repository user_repository;
+
+    public login_controller(user_repository userRepository) {
+        user_repository = userRepository;
+    }
 
     @GetMapping("/{email}/{senha}")
     public login_resposeDTO loginAttempt(@PathVariable String email, @PathVariable String senha) {
-        login_service login_service = new login_service(user_repository);
-        login_resposeDTO loginResposeDTO = login_service.loginAttempt(email, senha);
+        login_service logS = new login_service(user_repository);
 
-        return loginResposeDTO;
+        return logS.loginAttempt(email, senha);
 
     }
 }
