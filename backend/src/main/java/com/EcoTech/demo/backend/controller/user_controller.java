@@ -30,7 +30,7 @@ public class user_controller {
         return user_service.getUserSummary(id);
     }
 
-    @PutMapping("update/{id}")
+    @PutMapping("/update/{id}")
     public user_full_responseDTO updateUser(@PathVariable Long id, @RequestBody user_full_responseDTO repDTO) {
 
         User usr = user_repository.getById(id);
@@ -40,7 +40,7 @@ public class user_controller {
 
     }
 
-    @PutMapping("create")
+    @PutMapping("/create")
     public user_full_responseDTO createUser(@RequestBody user_updateDTO repDTO) {
         User usr = new User();
         return user_service.createUser(repDTO);
