@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Carteira Semente</title>
   <style>
-    /* TRILHAS – CARD DE RESUMO */
+   
 .trilha-resumo {
   position: relative;
   overflow: hidden;
@@ -34,17 +34,15 @@
 }
 
  :root {
-  --green: #16a34a;        /* verde principal */
-  --green-light: #dcfce7;  /* fundo verdinho */
-  --green-soft: #bbf7d0;   /* bordas/destaques verdes */
-  --bg: #0f172a;           /* fundo geral escuro */
-  --bg-card: #020617;      /* cards escuros */
-  --text: #e5e7eb;         /* texto claro */
-  --muted: #9ca3af;        /* texto apagado */
-  --border: #1f2937;       /* cor padrão de borda */
+  --green: #16a34a;     
+  --green-light: #dcfce7;  
+  --green-soft: #bbf7d0;   
+  --bg: #0f172a;           
+  --bg-card: #020617;     
+  --text: #e5e7eb;        
+  --muted: #9ca3af;        
+  --border: #1f2937;      
 }
-
-
 
     * {
       box-sizing: border-box;
@@ -64,7 +62,7 @@
       flex-direction: column;
     }
 
-    /* HEADER */
+   
     .header {
   background: radial-gradient(circle at top left, #22c55e, #16a34a 40%, #065f46 100%);
   border-bottom: none;
@@ -107,7 +105,7 @@
   font-size: 12px;
   opacity: 0.9;
 }
-    /* NAV / ABAS */
+   
      .tabs {
   display: flex;
   gap: 12px;
@@ -144,7 +142,7 @@
   transform: translateY(-1px);
 }
 
-    /* CONTEÚDO GERAL */
+   
     .content {
       max-width: 960px;
       margin: 0 auto;
@@ -228,7 +226,7 @@
       grid-template-columns: 1fr;
       gap: 16px;
     }
-/* TRILHAS – LISTA DE TRILHAS */
+
 .trilhas-grid {
   display: flex;
   flex-direction: column;
@@ -379,7 +377,7 @@
       color: var(--muted);
     }
 
-    /* PROGRESSO */
+    
     .progress-wrapper {
       margin-top: 8px;
     }
@@ -407,7 +405,7 @@
       width: 0;
     }
 
-    /* BOTÕES */
+    
     .btn {
       border-radius: 999px;
       border: none;
@@ -440,7 +438,7 @@
       background: var(--green-light);
     }
 
-    /* FORMULÁRIO */
+   
     .form-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -517,7 +515,7 @@
       color: #047857;
     }
 
-    /* LISTA DE BENEFÍCIOS */
+    
     .benefits-list {
       list-style: none;
       padding: 0;
@@ -537,7 +535,7 @@
       color: #047857;
     }
 
-    /* PERFIL */
+   
     .profile-header {
       display: flex;
       flex-direction: column;
@@ -624,7 +622,7 @@
       font-weight: 600;
     }
 
-    /* TIMELINE */
+    
     .timeline {
       position: relative;
       border-left: 1px solid var(--border);
@@ -661,18 +659,18 @@
 </head>
 <body>
   <div class="app">
-    <!-- HEADER -->
+   
     <header class="header">
       <div class="header-left">
-        <div class="logo">S</div>
+        <div class="logo">🌱</div>
         <div class="header-text">
           <h1>Carteira Semente</h1>
-          <p>Finanças + impacto verde</p>
+          <p>Seu guia para um futuro mais verde</p>
         </div>
       </div>
     </header>
 
-    <!-- NAV / ABAS -->
+   
     <nav class="tabs">
       <button class="tab tab--active" data-tab="trilhas">Trilhas</button>
       <button class="tab" data-tab="missoes">Missões</button>
@@ -681,9 +679,9 @@
       <button class="tab" data-tab="perfil">Perfil</button>
     </nav>
 
-    <!-- CONTEÚDO -->
+    
     <main class="content">
-      <!-- PÁGINA TRILHAS -->
+     
       <section id="trilhas" class="page page--active">
         <p id="nome"></p>
           <h2>Suas trilhas financeiras</h2>
@@ -703,7 +701,7 @@
               Seu progresso total
             </p>
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 4px;">
-              <span style="font-size: 24px; font-weight: 600; color: #047857;">45%</span>
+              <span style="font-size: 24px; font-weight: 600; color: #047857;">0%</span>
               <span style="font-size: 11px; color: #047857;">concluído</span>
             </div>
             <div class="progress-bar" style="margin-top: 6px;">
@@ -713,7 +711,7 @@
         </div>
 
         <div class="grid-2">
-          <!-- Trilha 1 -->
+          
           <div class="card card--clickable">
             <div class="card-header">
               <div class="card-title-group">
@@ -728,7 +726,7 @@
             <div class="progress-wrapper">
               <div class="progress-top">
                 <span>Progresso</span>
-                <span>40% concluído</span>
+                <span>0% concluído</span>
               </div>
               <div class="progress-bar">
                 <div class="progress-fill" style="width: 40%;"></div>
@@ -736,7 +734,7 @@
             </div>
           </div>
 
-          <!-- Trilha 2 -->
+         
           <div class="card card--clickable">
             <div class="card-header">
               <div class="card-title-group">
@@ -746,12 +744,12 @@
                   <p class="card-subtitle">Hábitos de impacto positivo</p>
                 </div>
               </div>
-              <span class="badge badge--amber">20% concluído</span>
+              <span class="badge badge--amber">0% concluído</span>
             </div>
             <div class="progress-wrapper">
               <div class="progress-top">
                 <span>Progresso</span>
-                <span>20%</span>
+                <span>0%</span>
               </div>
               <div class="progress-bar">
                 <div class="progress-fill" style="width: 20%;"></div>
@@ -759,7 +757,7 @@
             </div>
           </div>
 
-          <!-- Trilha 3 (bloqueada) -->
+          
           <div class="card" style="background: #f9fafb; border-style: dashed; opacity: 0.7;">
             <div class="card-header">
               <div class="card-title-group">
@@ -776,7 +774,7 @@
             </p>
           </div>
 
-          <!-- Trilha 4 -->
+          
           <div class="card card--clickable">
             <div class="card-header">
               <div class="card-title-group">
@@ -791,7 +789,7 @@
             <div class="progress-wrapper">
               <div class="progress-top">
                 <span>Progresso</span>
-                <span>10% concluído</span>
+                <span>0% concluído</span>
               </div>
               <div class="progress-bar">
                 <div class="progress-fill" style="width: 10%;"></div>
@@ -801,14 +799,14 @@
         </div>
       </section>
 
-      <!-- PÁGINA MISSÕES -->
+     
       <section id="missoes" class="page">
         <h2>Missões de Impacto</h2>
         <p class="text-muted">
           Complete desafios do dia a dia e transforme pontos em oportunidades verdes.
         </p>
 
-        <!-- filtros fake -->
+       
         <div style="margin: 16px 0; display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px;">
           <button class="btn btn--outline" type="button" style="padding: 4px 10px; font-size: 11px;">
             Todas
@@ -842,12 +840,11 @@
             <div style="display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-top:4px;">
               <span>Recompensa: +80 pontos de impacto</span>
               <button class="btn" type="button" style="background:none;border:none;color:var(--green);padding:0 0; font-size:12px;">
-                Ver detalhes
               </button>
             </div>
           </div>
 
-          <!-- Missão concluída -->
+         
           <div class="card" style="border-color: var(--green-soft);">
             <div class="card-header">
               <div class="card-title-group">
@@ -867,7 +864,7 @@
             </div>
           </div>
 
-          <!-- Missão bloqueada -->
+         
           <div class="card" style="background:#f9fafb;border-style:dashed;opacity:0.8;">
             <div class="card-header">
               <div class="card-title-group">
@@ -888,14 +885,14 @@
         </div>
       </section>
 
-      <!-- PÁGINA SIMULAR -->
+      
       <section id="simular" class="page">
         <h2>Simuladores</h2>
         <p class="text-muted">
           Veja quanto cabe no seu bolso e o impacto positivo de cada escolha.
         </p>
 
-        <!-- tipos de simulador (apenas layout) -->
+       
         <div class="grid-3" style="margin:16px 0;">
           <div class="card card--clickable">
             <div class="icon-circle icon-circle--yellow">☀️</div>
@@ -920,7 +917,7 @@
           </div>
         </div>
 
-        <!-- simulador de energia solar com JS -->
+        
         <div class="card">
           <p class="card-title">Simulador de Energia Solar</p>
 
@@ -961,7 +958,7 @@
         </div>
       </section>
 
-      <!-- PÁGINA BENEFÍCIOS -->
+     
       <section id="beneficios" class="page">
         <h2>Benefícios exclusivos</h2>
         <p class="text-muted">
@@ -993,14 +990,6 @@
           </ul>
 
           <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:8px;">
-            <button class="btn btn--outline" type="button">
-              Ver minhas conquistas
-            </button>
-            <button class="btn btn--primary" type="button">
-              Avançar para crédito sustentável
-            </button>
-          </div>
-        </div>
 
         <div style="margin-top:16px; display:flex; flex-direction:column; gap:12px;">
           <div class="card">
@@ -1016,19 +1005,19 @@
             <div style="display:grid; grid-template-columns:1fr; gap:8px; font-size:12px; margin-top:4px;">
               <div>
                 <p class="stat-label">Valor aproximado</p>
-                <p class="stat-value" style="font-size:14px;">R$ 15.000,00</p>
+                <p class="stat-value" style="font-size:14px;">R$ 0,00</p>
               </div>
               <div>
                 <p class="stat-label">Juros especiais</p>
-                <p class="stat-value" style="font-size:14px;">0,99% a.m.</p>
+                <p class="stat-value" style="font-size:14px;">0% a.m.</p>
               </div>
               <div>
                 <p class="stat-label">Prazo</p>
-                <p class="stat-value" style="font-size:14px;">Até 60 meses</p>
+                <p class="stat-value" style="font-size:14px;">Até x meses</p>
               </div>
               <div>
                 <p class="stat-label">Economia estimada</p>
-                <p class="stat-value" style="font-size:14px;color:#047857;">R$ 250,00/mês</p>
+                <p class="stat-value" style="font-size:14px;color:#047857;">R$ 0,00/mês</p>
               </div>
             </div>
           </div>
@@ -1041,15 +1030,15 @@
             <div style="display:grid; grid-template-columns:1fr; gap:8px; font-size:12px; margin-top:8px;">
               <div>
                 <p class="stat-label">Valor</p>
-                <p class="stat-value" style="font-size:14px;">Até R$ 25.000,00</p>
+                <p class="stat-value" style="font-size:14px;">Até R$ 0,00</p>
               </div>
               <div>
                 <p class="stat-label">Juros a partir de</p>
-                <p class="stat-value" style="font-size:14px;">1,2% a.m.</p>
+                <p class="stat-value" style="font-size:14px;">0% a.m.</p>
               </div>
               <div>
                 <p class="stat-label">Prazo</p>
-                <p class="stat-value" style="font-size:14px;">36 meses</p>
+                <p class="stat-value" style="font-size:14px;">x meses</p>
               </div>
               <div>
                 <p class="stat-label">Bônus</p>
@@ -1060,37 +1049,37 @@
         </div>
       </section>
 
-      <!-- PÁGINA PERFIL -->
+      
       <section id="perfil" class="page">
         <div class="profile-header">
           <div class="profile-main">
             <div class="avatar">FC</div>
             <div class="profile-text">
               <h3>Felipe Carvalho</h3>
-              <p>Jovem do futuro desde 2025</p>
+              <p>Integrante desde 2025</p>
             </div>
           </div>
           <span class="impact-badge">
-            🌱 Nível 3 de impacto
+            🌱 Nível ? de impacto
           </span>
         </div>
 
         <div class="stats-grid" style="margin-top:16px;">
           <div class="stat-card">
             <p class="stat-label">Missões realizadas</p>
-            <p class="stat-value">12</p>
+            <p class="stat-value">-</p>
           </div>
           <div class="stat-card">
             <p class="stat-label">Simulações feitas</p>
-            <p class="stat-value">5</p>
+            <p class="stat-value">-</p>
           </div>
           <div class="stat-card">
             <p class="stat-label">Trilhas concluídas</p>
-            <p class="stat-value">1</p>
+            <p class="stat-value">-</p>
           </div>
           <div class="stat-card">
             <p class="stat-label">Créditos desbloqueados</p>
-            <p class="stat-value">3</p>
+            <p class="stat-value">-</p>
           </div>
         </div>
 
@@ -1118,9 +1107,34 @@
     </main>
   </div>
 
-  <script src="/js/index.js"></script>
+  <script>
+  
+    (function () {
+      const tabs = document.querySelectorAll('.tab');
+      const pages = document.querySelectorAll('.page');
+
+      function activateTab(tabEl) {
+        tabs.forEach(t => t.classList.remove('tab--active'));
+        tabEl.classList.add('tab--active');
+
+        const target = tabEl.dataset.tab;
+        pages.forEach(p => {
+          if (p.id === target) {
+            p.classList.add('page--active');
+          } else {
+            p.classList.remove('page--active');
+          }
+        });
+      }
+
+      const initial = document.querySelector('.tab.tab--active');
+      if (initial) activateTab(initial);
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => activateTab(tab));
+      });
+    })();
+  </script>
 
 </body>
 </html>
-
-  
