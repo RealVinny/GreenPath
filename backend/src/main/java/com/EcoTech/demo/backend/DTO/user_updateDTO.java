@@ -10,6 +10,7 @@ public class user_updateDTO {
 
     private String nomeCliente;
     private String emailCliente;
+    private String apelidoCliente;
     @Column(name = "saldo_greenwallet")
     private double saldoGreenWallet;
     private double ultimoCredito;

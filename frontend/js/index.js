@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", ()=>{
 
-    fetch("/api/user/full/1")
+    fetch("/api/user/full/2")
         .then(response => response.json())
         .then(user =>{
             document.getElementById("nome").textContent = user.nomeCliente
